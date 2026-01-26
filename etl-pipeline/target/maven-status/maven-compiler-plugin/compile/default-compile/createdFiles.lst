@@ -1,0 +1,16 @@
+META-INF/spring-configuration-metadata.json
+sk/pcola/etl/scheduler/EtlScheduler.class
+sk/pcola/etl/catalog/CategoryMatcher$MappingStats.class
+sk/pcola/etl/staging/humed/HumedRawProduct$HumedCategory.class
+sk/pcola/etl/staging/humed/HumedStagingService.class
+sk/pcola/etl/EtlApplication.class
+sk/pcola/etl/config/HumedConfig.class
+sk/pcola/etl/catalog/CategoryMatcher$MatchResult.class
+sk/pcola/etl/staging/humed/HumedStagingService$UpsertResult.class
+sk/pcola/etl/catalog/CategoryMatcher.class
+sk/pcola/etl/EtlCommandLineRunner.class
+sk/pcola/etl/staging/humed/HumedRawProduct.class
+sk/pcola/etl/staging/humed/HumedXmlParser.class
+sk/pcola/etl/staging/humed/HumedSyncJob.class
+sk/pcola/etl/common/util/EncodingUtil.class
+sk/pcola/etl/config/CommonConfig.class

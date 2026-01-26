@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "name": "etl.humed",
+      "type": "sk.pcola.etl.config.HumedConfig",
+      "sourceType": "sk.pcola.etl.config.HumedConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "etl.humed.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "sk.pcola.etl.config.HumedConfig",
+      "defaultValue": true
+    },
+    {
+      "name": "etl.humed.feed-path",
+      "type": "java.lang.String",
+      "sourceType": "sk.pcola.etl.config.HumedConfig"
+    },
+    {
+      "name": "etl.humed.feed-url",
+      "type": "java.lang.String",
+      "sourceType": "sk.pcola.etl.config.HumedConfig"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}
