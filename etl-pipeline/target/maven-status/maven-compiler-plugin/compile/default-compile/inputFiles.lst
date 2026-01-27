@@ -1,6 +1,7 @@
 /home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/EtlApplication.java
 /home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/EtlCommandLineRunner.java
 /home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/catalog/CategoryMatcher.java
+/home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/catalog/ProductNormalizer.java
 /home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/common/util/EncodingUtil.java
 /home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/config/CommonConfig.java
 /home/pcola/workspace/titan_moonid/etl-pipeline/src/main/java/sk/pcola/etl/config/HumedConfig.java

@@ -12,7 +12,7 @@ import java.util.Optional;
 /**
  * Service pre mapovanie zdrojových kategórií na cieľové kategórie.
  * Používa pravidlá z catalog.category_rules tabuľky.
- * 
+ *
  * Postup mapovania:
  * 1. Skontroluj či kategória nie je v exclusions
  * 2. Presná zhoda na source_category_exact
