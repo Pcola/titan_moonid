@@ -1,8 +1,13 @@
-# Maven
-/target/
-/pom.xml.tag
-/pom.xml.releaseBackup
+# Maven (Compiled code)
+target/
 /pom.xml.versionsBackup
+
+# Environment Variables / Secrets (DÔLEŽITÉ!)
+.env
+.env.local
+.env.*
+
+# Logy
 /logs/
 /*.log
 
@@ -24,4 +29,3 @@ Thumbs.db
 /postgres-data/
 /minio-data/
 /feeds/
-
