@@ -235,7 +235,7 @@ public class ProductNormalizer {
                                      BigDecimal marginPercent, Integer packQuantity,
                                      BigDecimal weightKg, Timestamp now) {
         // Generuj SKU (použijeme HUMED SKU)
-        String catalogSku = "HU-" + staging.sku();
+        String catalogSku = staging.sku();
 
         // Skontroluj unikátnosť SKU
         Integer existingBySku = jdbc.query(

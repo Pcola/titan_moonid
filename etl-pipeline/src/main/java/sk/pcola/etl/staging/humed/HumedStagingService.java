@@ -155,6 +155,8 @@ public class HumedStagingService {
 
     /**
      * Batch upsert pre viacero produktov.
+     * POZOR: Bez @Transactional - každý produkt je samostatná operácia.
+     * Ak jeden zlyhá, ostatné pokračujú.
      */
     @Transactional
     public UpsertResult upsertBatch(List<HumedRawProduct> products) {

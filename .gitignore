@@ -1,31 +1,42 @@
-# Maven (Compiled code)
-target/
-/pom.xml.versionsBackup
+# Maven
+**/target/
+pom.xml.versionsBackup
+*.class
+*.jar
+*.war
+*.original
 
-# Environment Variables / Secrets (DÔLEŽITÉ!)
+# Environment / Secrets
 .env
 .env.local
-.env.*
+*.env
+*.env.*
 
-# Logy
+# Logs
 /logs/
 /*.log
 
-# IntelliJ IDEA
+# IDE - IntelliJ
 /.idea/
 /*.iml
 /out/
 
-# Eclipse
-/.classpath
-/.project
-/.settings/
+# Eclipse (ak by si to náhodou otvoril)
+.classpath
+.project
+.settings/
 
-# OS súbory
+# OS files
 .DS_Store
 Thumbs.db
 
-# Docker
+# Docker volumes / local data
 /postgres-data/
 /minio-data/
 /feeds/
+
+# Project-specific noise
+wc-db/
+wp-content/
+etl-pipeline/batch_requests.jsonl
+

@@ -25,3 +25,30 @@ services:
       - "9001:9001" # Console UI
     volumes:
       - ./minio-data:/data
+      
+      # --- WooCommerce Sandbox ---
+  wc_db:
+    image: mariadb:latest
+    container_name: titan_wc_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass
+      MYSQL_DATABASE: wc
+      MYSQL_USER: wc_user
+      MYSQL_PASSWORD: wc_pass
+    volumes:
+      - ./wc-db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    container_name: titan_wc
+    depends_on:
+      - wc_db
+    environment:
+      WORDPRESS_DB_HOST: wc_db
+      WORDPRESS_DB_USER: wc_user
+      WORDPRESS_DB_PASSWORD: wc_pass
+      WORDPRESS_DB_NAME: wc
+    ports:
+      - "8080:80"
+    volumes:
+      - ./wp-content:/var/www/html/wp-content

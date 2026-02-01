@@ -267,9 +267,9 @@ INSERT INTO catalog.category_rules (source, source_category_exact, target_catego
 -- PRICE RULES: Pravidlá pre výpočet B2B cien
 -- =============================================================
 
--- Globálne pravidlo: 55% marža na všetko
+-- Globálne pravidlo: 60% marža na všetko
 INSERT INTO catalog.price_rules (category_id, source, rule_type, value, priority, is_active) VALUES
-(NULL, NULL, 'margin_percent', 55.00, 100, TRUE);
+(NULL, NULL, 'margin_percent', 60.00, 100, TRUE);
 
 -- Špecifické pravidlo pre TORK (môže mať nižšiu maržu)
 -- INSERT INTO catalog.price_rules (category_id, source, rule_type, value, priority, is_active) VALUES
@@ -282,7 +282,7 @@ INSERT INTO catalog.price_rules (category_id, source, rule_type, value, priority
 
 -- Pohľad na kategórie s cestou
 CREATE OR REPLACE VIEW catalog.v_categories_with_path AS
-SELECT 
+SELECT
     c.id,
     c.parent_id,
     c.level,
@@ -301,7 +301,7 @@ FROM catalog.categories c;
 
 -- Pohľad na nenamapované produkty
 CREATE OR REPLACE VIEW catalog.v_unmapped_products AS
-SELECT 
+SELECT
     h.feed_id,
     h.sku,
     h.title,
@@ -309,8 +309,8 @@ SELECT
     h.imported_at
 FROM staging.humed_raw h
 WHERE NOT EXISTS (
-    SELECT 1 FROM catalog.category_mapping_log m 
-    WHERE m.source = 'humed' 
+    SELECT 1 FROM catalog.category_mapping_log m
+    WHERE m.source = 'humed'
     AND m.source_product_id = h.feed_id
     AND m.match_type != 'unmapped'
 )
@@ -318,7 +318,7 @@ AND h.is_excluded = FALSE;
 
 -- Pohľad na štatistiky mapovania
 CREATE OR REPLACE VIEW catalog.v_mapping_stats AS
-SELECT 
+SELECT
     source,
     match_type,
     COUNT(*) as count,
